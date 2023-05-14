@@ -3,6 +3,7 @@ package com.example.rock_paper_scissors;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.rock_paper_scissors.databinding.ActivityMainBinding;
 
@@ -14,8 +15,34 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        binding.Rock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.human.setImageResource(R.drawable.rock_hand);
+                n1 = "Rock";
+                display();
+            }
+        });
+
+        binding.Paper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.human.setImageResource(R.drawable.paper_hand);
+                n1 = "Paper";
+                display();
+            }
+        });
+
+        binding.Scissor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.human.setImageResource(R.drawable.scissor_hand);
+                n1 = "Scissor";
+                display();
+            }
+        });
     }
     public void display(){
         Random rnd= new Random();

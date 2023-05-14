@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/robot"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginTop="10dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/human"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginTop="164dp"
@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.593"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/robot" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -50,28 +50,37 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/Rock"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/imagebg"
+            android:elevation="12dp"
+            android:padding="5dp"
             android:src="@drawable/rock" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/Paper"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/imagebg"
+            android:elevation="12dp"
+            android:padding="5dp"
             android:src="@drawable/paper" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/Scissor"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
+            android:background="@drawable/imagebg"
+            android:elevation="12dp"
+            android:padding="5dp"
             android:src="@drawable/scissors" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
